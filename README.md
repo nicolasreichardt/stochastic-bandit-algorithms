@@ -30,10 +30,12 @@ stochastic-bandit-algorithms/
 │   ├── epsilon_greedy.py             # ε-Greedy implementation
 │   ├── upper_confidence_bound.py     # UCB1 implementation
 │   └── thompson_sampling.py          # Thompson Sampling implementation
-├── bandit_algorithms.ipynb           
-├── requirements.txt                  
+├── plots/                            # Saved figures and visualizations
+├── bandit_algorithms.ipynb
+├── requirements.txt
 ├── LICENSE
 └── README.md
+
 ```
 
 ## Installation
@@ -60,13 +62,38 @@ jupyter notebook bandit_algorithms.ipynb
 
 ## Experimental Setup
 
-The implementations are evaluated on a 3-armed Bernoulli bandit with probabilities `[0.2, 0.5, 0.7]`, where arm 3 is optimal. Each algorithm runs for 5,000 iterations, tracking:
+The implementations are evaluated using comprehensive experiments that test algorithm performance across different scenarios:
 
-- **Instantaneous reward**: Reward obtained at each time step
-- **Cumulative reward**: Total reward accumulated over time
+### Bandit Configurations
+
+Three difficulty levels are tested to evaluate algorithm robustness:
+
+- **Easy**: `[0.1, 0.5, 0.9]` - Large reward differences between arms
+- **Medium**: `[0.3, 0.5, 0.7]` - Moderate reward differences
+- **Hard**: `[0.48, 0.50, 0.52]` - Small reward differences (challenging exploration)
+
+### Experimental Protocol
+
+- **Time horizon**: 5,000 iterations per experiment
+- **Replications**: 50 independent runs per configuration
+- **Algorithms compared**: Epsilon-Greedy (ε=0.1), UCB1, and Thompson Sampling
+
+### Metrics Tracked
+
+For each algorithm and configuration, the following metrics are measured:
+
+- **Cumulative reward**: Total reward accumulated over time (with confidence intervals)
 - **Optimal arm selection rate**: Frequency of choosing the best arm
+- **Cumulative regret**: Difference between optimal performance and actual performance
 
-See the Jupyter notebook for complete experiments and visualizations.
+### Sensitivity Analysis
+
+Additional experiments explore hyperparameter sensitivity:
+
+- **Epsilon-Greedy**: Tested with ε ∈ {0.01, 0.05, 0.1, 0.15, 0.2}
+- Analysis shows impact of exploration-exploitation trade-off on performance
+
+Results are averaged across multiple runs with standard deviation bands to show statistical reliability.
 
 ---
 
