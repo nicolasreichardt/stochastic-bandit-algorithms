@@ -9,7 +9,7 @@
 
 A Python implementation of classical stochastic multi-armed bandit algorithms from scratch, developed as part of a term paper for the Algorithmic Game Theory and Governance course at Hertie School. 
 
-For theoretical background, mathematical formulations, and detailed analysis, see the accompanying [paper](ADD THE PAPER HERE) ADD PAPER LINK HERE
+For theoretical background, mathematical formulations, and detailed analysis, see the accompanying [paper](PLACEHOLDER.pdf).
 
 ## Overview
 
@@ -32,6 +32,7 @@ stochastic-bandit-algorithms/
 │   └── thompson_sampling.py          # Thompson Sampling implementation
 ├── plots/                            # Saved figures and visualizations
 ├── bandit_algorithms.ipynb
+├── PLACEHOLDER.pdf
 ├── requirements.txt
 ├── LICENSE
 └── README.md
