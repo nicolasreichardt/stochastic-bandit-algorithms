@@ -1,4 +1,5 @@
 # GRAD-E1489: Algorithmic Game Theory and Governance
+
 # Instructor: Prof. Asya Magazinnik, PhD
 
 ## Term paper - Nicolas Reichardt, 245611
@@ -7,9 +8,9 @@
 
 ## Stochastic Multi-Armed Bandit Algorithms
 
-A Python implementation of classical stochastic multi-armed bandit algorithms from scratch, developed as part of a term paper for the Algorithmic Game Theory and Governance course at Hertie School. 
+A Python implementation of classical stochastic multi-armed bandit algorithms from scratch, developed as part of a term paper for the Algorithmic Game Theory and Governance course at Hertie School.
 
-For theoretical background, mathematical formulations, and detailed analysis, see the accompanying [paper](PLACEHOLDER.pdf).
+For theoretical background, mathematical formulations, and detailed analysis, see the accompanying [paper](AGT_Term_Paper_Reichardt.pdf).
 
 ## Overview
 
@@ -22,6 +23,7 @@ This repository provides clean, educational implementations of three fundamental
 The implementations are designed for clarity and educational purposes, demonstrating the core mechanics of each algorithm without relying on external libraries. All algorithms are implemented from scratch in Python for a Bernoulli bandit setting.
 
 ## Repository Structure
+
 ```
 stochastic-bandit-algorithms/
 ├── src/
@@ -32,7 +34,7 @@ stochastic-bandit-algorithms/
 │   └── thompson_sampling.py          # Thompson Sampling implementation
 ├── plots/                            # Saved figures and visualizations
 ├── bandit_algorithms.ipynb
-├── PLACEHOLDER.pdf
+├── AGT_Term_Paper_Reichardt.pdf
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -42,6 +44,7 @@ stochastic-bandit-algorithms/
 ## Installation
 
 Clone the repository and install the required dependencies:
+
 ```bash
 git clone https://github.com/nicolasreichardt/stochastic-bandit-algorithms.git
 cd stochastic-bandit-algorithms
@@ -57,6 +60,7 @@ The `bandit_algorithms.ipynb` notebook contains complete experiments comparing a
 - **Optimal arm selection rate**: Frequency of choosing the best arm
 
 To run the experiments:
+
 ```bash
 jupyter notebook bandit_algorithms.ipynb
 ```
@@ -78,23 +82,6 @@ Three difficulty levels are tested to evaluate algorithm robustness:
 - **Time horizon**: 5,000 iterations per experiment
 - **Replications**: 50 independent runs per configuration
 - **Algorithms compared**: Epsilon-Greedy (ε=0.1), UCB1, and Thompson Sampling
-
-### Metrics Tracked
-
-For each algorithm and configuration, the following metrics are measured:
-
-- **Cumulative reward**: Total reward accumulated over time (with confidence intervals)
-- **Optimal arm selection rate**: Frequency of choosing the best arm
-- **Cumulative regret**: Difference between optimal performance and actual performance
-
-### Sensitivity Analysis
-
-Additional experiments explore hyperparameter sensitivity:
-
-- **Epsilon-Greedy**: Tested with ε ∈ {0.01, 0.05, 0.1, 0.15, 0.2}
-- Analysis shows impact of exploration-exploitation trade-off on performance
-
-Results are averaged across multiple runs with standard deviation bands to show statistical reliability.
 
 ---
 
